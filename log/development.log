@@ -157,3 +157,708 @@ Processing ResourcesController#index (for 127.0.0.1 at 2010-06-10 10:19:54) [GET
 Rendering template within layouts/resources
 Rendering resources/index
 Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/resources]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100610081123)
+Migrating to CreateResources (20100610081858)
+Migrating to CreateActivities (20100610124557)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "day" date, "project_id" integer, "resource_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100610124557')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("activities")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("resources")[0m
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 14:47:08) [GET]
+  [4;36;1mActivity Load (0.3ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+Completed in 86ms (View: 63, DB: 0) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 14:47:10) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+Completed in 149ms (View: 145, DB: 0) | 200 OK [http://localhost/activities/new]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 14:47:43) [GET]
+  [4;35;1mActivity Load (0.3ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 14:47:45) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/activities/new]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 14:47:49) [GET]
+  [4;36;1mActivity Load (0.3ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/activities]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-06-10 14:47:53) [GET]
+  [4;35;1mProject Load (0.4ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2010-06-10 14:48:04) [GET]
+  [4;36;1mResource Load (0.4ms)[0m   [0;1mSELECT * FROM "resources" [0m
+Rendering template within layouts/resources
+Rendering resources/index
+Completed in 22ms (View: 17, DB: 0) | 200 OK [http://localhost/resources]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100610081123)
+Migrating to CreateResources (20100610081858)
+Migrating to CreateActivities (20100610124557)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("activities")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("resources")[0m
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:23:54) [GET]
+  [4;36;1mActivity Load (0.3ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+Completed in 64ms (View: 37, DB: 0) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:23:56) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+ERROR: compiling _run_erb_app47views47activities47new46html46erb RAISED compile error
+/Users/marache/Projects/tasktracker3/app/views/activities/new.html.erb:12: syntax error, unexpected ')', expecting kEND
+...ude_blank => 'None'})) ).to_s); @output_buffer.concat "\n"
+                              ^
+Function body:           def _run_erb_app47views47activities47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New activity</h1>\n"
+@output_buffer.concat "\n"
+ form_for(@activity) do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :day ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.date_select :day ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :project ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.collection_select("post", "project_id", Project.all.collect {|p| [ p.title, p.id ] }, {:include_blank => 'None'})) ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    <!-- "; @output_buffer.concat(( f.text_field :project ).to_s); @output_buffer.concat "  -->\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :resource ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :resource ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Back', activities_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/marache/Projects/tasktracker3/app/views/activities/new.html.erb:27:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/marache/Projects/tasktracker3/app/controllers/activities_controller.rb:29:in `new'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/marache/Projects/tasktracker3/script/server:3
+-e:1:in `load'
+-e:1
+
+ActionView::TemplateError (compile error
+/Users/marache/Projects/tasktracker3/app/views/activities/new.html.erb:12: syntax error, unexpected ')', expecting kEND
+...ude_blank => 'None'})) ).to_s); @output_buffer.concat "\n"
+                              ^) on line #12 of app/views/activities/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :project %><br />
+12:     <%= f.collection_select("post", "project_id", Project.all.collect {|p| [ p.title, p.id ] }, {:include_blank => 'None'})) %>
+13:     <!-- <%= f.text_field :project %>  -->
+14:   </p>
+15:   <p>
+
+    app/views/activities/new.html.erb:27:in `compile!'
+    app/controllers/activities_controller.rb:29:in `new'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (25.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:25:19) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+ERROR: compiling _run_erb_app47views47activities47new46html46erb RAISED compile error
+/Users/marache/Projects/tasktracker3/app/views/activities/new.html.erb:12: syntax error, unexpected ')', expecting kEND
+...ude_blank => 'None'})) ).to_s); @output_buffer.concat "\n"
+                              ^
+Function body:           def _run_erb_app47views47activities47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New activity</h1>\n"
+@output_buffer.concat "\n"
+ form_for(@activity) do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :day ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.date_select :day ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :project ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.collection_select("activity", "project_id", Project.all.collect {|p| [ p.title, p.id ] }, {:include_blank => 'None'})) ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    <!-- "; @output_buffer.concat(( f.text_field :project ).to_s); @output_buffer.concat "  -->\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :resource ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :resource ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Back', activities_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/marache/Projects/tasktracker3/app/views/activities/new.html.erb:27:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/marache/Projects/tasktracker3/app/controllers/activities_controller.rb:29:in `new'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/marache/Projects/tasktracker3/script/server:3
+-e:1:in `load'
+-e:1
+
+ActionView::TemplateError (compile error
+/Users/marache/Projects/tasktracker3/app/views/activities/new.html.erb:12: syntax error, unexpected ')', expecting kEND
+...ude_blank => 'None'})) ).to_s); @output_buffer.concat "\n"
+                              ^) on line #12 of app/views/activities/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :project %><br />
+12:     <%= f.collection_select("activity", "project_id", Project.all.collect {|p| [ p.title, p.id ] }, {:include_blank => 'None'})) %>
+13:     <!-- <%= f.text_field :project %>  -->
+14:   </p>
+15:   <p>
+
+    app/views/activities/new.html.erb:27:in `compile!'
+    app/controllers/activities_controller.rb:29:in `new'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (72.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:25:46) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" [0m
+
+ActionView::TemplateError (undefined method `activity' for #<Activity:0x1823010>) on line #12 of app/views/activities/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :project %><br />
+12:     <%= f.collection_select("activity", "project_id", Project.all.collect {|p| [ p.title, p.id ] }, {:include_blank => 'None'}) %>
+13:     <!-- <%= f.text_field :project %>  -->
+14:   </p>
+15:   <p>
+
+    app/views/activities/new.html.erb:12
+    app/views/activities/new.html.erb:3
+    app/controllers/activities_controller.rb:29:in `new'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (37.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:25:56) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" [0m
+
+ActionView::TemplateError (undefined method `post' for #<Activity:0x2629da8>) on line #12 of app/views/activities/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :project %><br />
+12:     <%= f.collection_select("post", "project_id", Project.all.collect {|p| [ p.title, p.id ] }, {:include_blank => 'None'}) %>
+13:     <!-- <%= f.text_field :project %>  -->
+14:   </p>
+15:   <p>
+
+    app/views/activities/new.html.erb:12
+    app/views/activities/new.html.erb:3
+    app/controllers/activities_controller.rb:29:in `new'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (89.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:26:08) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" [0m
+
+ActionView::TemplateError ({:include_blank=>"None"} is not a symbol) on line #12 of app/views/activities/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :project %><br />
+12:     <%= f.collection_select("project", "project_id", Project.all.collect {|p| [ p.title, p.id ] }, {:include_blank => 'None'}) %>
+13:     <!-- <%= f.text_field :project %>  -->
+14:   </p>
+15:   <p>
+
+    app/views/activities/new.html.erb:12
+    app/views/activities/new.html.erb:3
+    app/controllers/activities_controller.rb:29:in `new'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:26:22) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" [0m
+
+ActionView::TemplateError (wrong number of arguments (3 for 4)) on line #12 of app/views/activities/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :project %><br />
+12:     <%= f.collection_select("project", "project_id", Project.all.collect {|p| [ p.title, p.id ] }) %>
+13:     <!-- <%= f.text_field :project %>  -->
+14:   </p>
+15:   <p>
+
+    app/views/activities/new.html.erb:12:in `collection_select'
+    app/views/activities/new.html.erb:12
+    app/views/activities/new.html.erb:3
+    app/controllers/activities_controller.rb:29:in `new'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:27:27) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" [0m
+
+ActionView::TemplateError (undefined method `#<ActionView::Helpers::FormBuilder:0x2664458>' for #<Activity:0x267c508>) on line #12 of app/views/activities/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :project %><br />
+12:     <%= f.collection_select(f, "project_id", Project.all.collect {|p| [ p.title, p.id ] }, {:include_blank => 'None'}) %>
+13:     <!-- <%= f.text_field :project %>  -->
+14:   </p>
+15:   <p>
+
+    app/views/activities/new.html.erb:12
+    app/views/activities/new.html.erb:3
+    app/controllers/activities_controller.rb:29:in `new'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:27:43) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" [0m
+
+ActionView::TemplateError (undefined method `#<ActionView::Helpers::FormBuilder:0x273b3cc>' for #<Activity:0x2753738>) on line #12 of app/views/activities/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :project %><br />
+12:     <%= f.collection_select(f, "project_id", Project.all.collect {|p| [ p.title, p.id ] }, {}) %>
+13:     <!-- <%= f.text_field :project %>  -->
+14:   </p>
+15:   <p>
+
+    app/views/activities/new.html.erb:12
+    app/views/activities/new.html.erb:3
+    app/controllers/activities_controller.rb:29:in `new'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (34.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:27:50) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" [0m
+
+ActionView::TemplateError (wrong number of arguments (4 for 5)) on line #12 of app/views/activities/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :project %><br />
+12:     <%= collection_select(f, "project_id", Project.all.collect {|p| [ p.title, p.id ] }, {}) %>
+13:     <!-- <%= f.text_field :project %>  -->
+14:   </p>
+15:   <p>
+
+    app/views/activities/new.html.erb:12:in `collection_select'
+    app/views/activities/new.html.erb:12
+    app/views/activities/new.html.erb:3
+    app/controllers/activities_controller.rb:29:in `new'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (103.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:29:50) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" [0m
+
+ActionView::TemplateError (undefined method `activity' for #<Activity:0x26cf460>) on line #12 of app/views/activities/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :project %><br />
+12:     <%= f.collection_select(:activity, :project_id, Project.all, {:prompt => true}) %>
+13:     <!-- <%= f.text_field :project %>  -->
+14:   </p>
+15:   <p>
+
+    app/views/activities/new.html.erb:12
+    app/views/activities/new.html.erb:3
+    app/controllers/activities_controller.rb:29:in `new'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:30:04) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" [0m
+
+ActionView::TemplateError (undefined method `map' for :project_id:Symbol) on line #12 of app/views/activities/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :project %><br />
+12:     <%= f.collection_select(:project, :project_id, Project.all, {:prompt => true}) %>
+13:     <!-- <%= f.text_field :project %>  -->
+14:   </p>
+15:   <p>
+
+    app/views/activities/new.html.erb:12
+    app/views/activities/new.html.erb:3
+    app/controllers/activities_controller.rb:29:in `new'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (38.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:31:14) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" [0m
+
+ActionView::TemplateError ({:prompt=>true} is not a symbol) on line #12 of app/views/activities/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :project %><br />
+12:     <%= collection_select(:activity, :project_id, Project.all, :id, {:prompt => true}) %>
+13:     <!-- <%= f.text_field :project %>  -->
+14:   </p>
+15:   <p>
+
+    app/views/activities/new.html.erb:12
+    app/views/activities/new.html.erb:3
+    app/controllers/activities_controller.rb:29:in `new'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (90.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:32:20) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" [0m
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/activities/new]
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-10 15:33:31) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" [0m
+  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM "resources" [0m
+Completed in 40ms (View: 28, DB: 0) | 200 OK [http://localhost/activities/new]
+
+
+Processing ActivitiesController#create (for 127.0.0.1 at 2010-06-10 15:33:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"dTG3vGbxgkCAyCtUc7dSL7XVO5P2Z0pbtNRc1cE81o8=", "activity"=>{"day(3i)"=>"9", "project_id"=>"1", "resource_id"=>"1", "day(1i)"=>"2010", "day(2i)"=>"6"}}
+  [4;36;1mActivity Create (0.5ms)[0m   [0;1mINSERT INTO "activities" ("project_id", "updated_at", "resource_id", "day", "created_at") VALUES(1, '2010-06-10 13:33:40', 1, '2010-06-09', '2010-06-10 13:33:40')[0m
+Redirected to http://localhost:3000/activities/1
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/activities]
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-10 15:33:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mActivity Load (0.2ms)[0m   [0mSELECT * FROM "activities" WHERE ("activities"."id" = 1) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/activities/1]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:33:50) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2010-06-10 15:33:55) [GET]
+  [4;35;1mResource Load (0.4ms)[0m   [0mSELECT * FROM "resources" [0m
+Rendering template within layouts/resources
+Rendering resources/index
+Completed in 70ms (View: 66, DB: 0) | 200 OK [http://localhost/resources]
+
+
+Processing ResourcesController#show (for 127.0.0.1 at 2010-06-10 15:33:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Rendering template within layouts/resources
+Rendering resources/show
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/resources/1]
+
+
+Processing ResourcesController#show (for 127.0.0.1 at 2010-06-10 15:34:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 2) [0m
+Rendering template within layouts/resources
+Rendering resources/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/resources/2]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-06-10 15:34:08) [GET]
+  [4;36;1mProject Load (0.4ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/projects]
