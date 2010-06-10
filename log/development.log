@@ -18,3 +18,142 @@
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100610081123)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100610081123')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("projects")[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-06-10 10:15:41) [GET]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 46ms (View: 43, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-06-10 10:15:44) [GET]
+Rendering template within layouts/projects
+Rendering projects/new
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2010-06-10 10:15:54) [POST]
+  Parameters: {"commit"=>"Create", "project"=>{"title"=>"Test", "id"=>"120000", "description"=>"Toto"}, "authenticity_token"=>"dTG3vGbxgkCAyCtUc7dSL7XVO5P2Z0pbtNRc1cE81o8="}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("updated_at", "title", "description", "created_at") VALUES('2010-06-10 08:15:54', 'Test', 'Toto', '2010-06-10 08:15:54')[0m
+Redirected to http://localhost:3000/projects/1
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-10 10:15:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+Completed in 40ms (View: 36, DB: 0) | 200 OK [http://localhost/projects/1]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-06-10 10:15:58) [GET]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/projects]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100610081123)
+Migrating to CreateResources (20100610081858)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100610081858')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("projects")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("resources")[0m
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2010-06-10 10:19:37) [GET]
+  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM "resources" [0m
+Rendering template within layouts/resources
+Rendering resources/index
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://localhost/resources]
+
+
+Processing ResourcesController#new (for 127.0.0.1 at 2010-06-10 10:19:39) [GET]
+Rendering template within layouts/resources
+Rendering resources/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/resources/new]
+
+
+Processing ResourcesController#create (for 127.0.0.1 at 2010-06-10 10:19:43) [POST]
+  Parameters: {"commit"=>"Create", "resource"=>{"name"=>"Mathieu MARACHE"}, "authenticity_token"=>"dTG3vGbxgkCAyCtUc7dSL7XVO5P2Z0pbtNRc1cE81o8="}
+  [4;35;1mResource Create (0.4ms)[0m   [0mINSERT INTO "resources" ("name", "updated_at", "created_at") VALUES('Mathieu MARACHE', '2010-06-10 08:19:43', '2010-06-10 08:19:43')[0m
+Redirected to http://localhost:3000/resources/1
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/resources]
+
+
+Processing ResourcesController#show (for 127.0.0.1 at 2010-06-10 10:19:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Rendering template within layouts/resources
+Rendering resources/show
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/resources/1]
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2010-06-10 10:19:47) [GET]
+  [4;35;1mResource Load (0.3ms)[0m   [0mSELECT * FROM "resources" [0m
+Rendering template within layouts/resources
+Rendering resources/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/resources]
+
+
+Processing ResourcesController#new (for 127.0.0.1 at 2010-06-10 10:19:48) [GET]
+Rendering template within layouts/resources
+Rendering resources/new
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/resources/new]
+
+
+Processing ResourcesController#create (for 127.0.0.1 at 2010-06-10 10:19:53) [POST]
+  Parameters: {"commit"=>"Create", "resource"=>{"name"=>"Florent COUDRET"}, "authenticity_token"=>"dTG3vGbxgkCAyCtUc7dSL7XVO5P2Z0pbtNRc1cE81o8="}
+  [4;36;1mResource Create (0.3ms)[0m   [0;1mINSERT INTO "resources" ("name", "updated_at", "created_at") VALUES('Florent COUDRET', '2010-06-10 08:19:53', '2010-06-10 08:19:53')[0m
+Redirected to http://localhost:3000/resources/2
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/resources]
+
+
+Processing ResourcesController#show (for 127.0.0.1 at 2010-06-10 10:19:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 2) [0m
+Rendering template within layouts/resources
+Rendering resources/show
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/resources/2]
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2010-06-10 10:19:54) [GET]
+  [4;36;1mResource Load (0.4ms)[0m   [0;1mSELECT * FROM "resources" [0m
+Rendering template within layouts/resources
+Rendering resources/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/resources]
