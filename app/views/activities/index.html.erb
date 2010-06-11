@@ -10,8 +10,8 @@
 <% @activities.each do |activity| %>
   <tr>
     <td><%=h activity.day %></td>
-    <td><%=h activity.project %></td>
-    <td><%=h activity.resource %></td>
+    <td><%=h activity.project.title %></td>
+    <td><%=h activity.resource.name %></td>
     <td><%= link_to 'Show', activity %></td>
     <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
     <td><%= link_to 'Destroy', activity, :confirm => 'Are you sure?', :method => :delete %></td>

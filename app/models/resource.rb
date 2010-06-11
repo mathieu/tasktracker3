@@ -1,3 +1,3 @@
 class Resource < ActiveRecord::Base
-  has_many :projects
+  has_many :activities
 end

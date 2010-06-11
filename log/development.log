@@ -862,3 +862,1288 @@ Processing ProjectsController#index (for 127.0.0.1 at 2010-06-10 15:34:08) [GET]
 Rendering template within layouts/projects
 Rendering projects/index
 Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-06-10 15:37:23) [GET]
+  [4;35;1mProject Load (0.4ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:28) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:30) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:31) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:31) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:32) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:32) [GET]
+  [4;35;1mActivity Load (0.5ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:32) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 20ms (View: 16, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:32) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (1.0ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 15ms (View: 11, DB: 2) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:32) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:33) [GET]
+  [4;35;1mActivity Load (0.6ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:33) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:33) [GET]
+  [4;35;1mActivity Load (0.6ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:33) [GET]
+  [4;36;1mActivity Load (0.5ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:33) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:33) [GET]
+  [4;36;1mActivity Load (1.7ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:33) [GET]
+  [4;35;1mActivity Load (0.5ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:33) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:33) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:33) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.3ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 78ms (View: 73, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:33) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:33) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:34) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 25ms (View: 21, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:34) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:34) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:34) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:34) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:34) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 30ms (View: 25, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:34) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:34) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 20ms (View: 16, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:37:34) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-10 15:38:04) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 742ms (View: 737, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-06-10 15:42:12) [GET]
+  [4;35;1mProject Load (0.4ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-10 15:42:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+
+ActionView::TemplateError (undefined method `num_of_instances' for #<ActionView::Base:0x24fe2a8>) on line #18 of app/views/projects/show.html.erb:
+15: 
+16: <p>
+17:   <b>Days:</b>
+18:   <%=h num_of_instances(@project.resources) %>
+19: </p>
+20: 
+21: <%= link_to 'Edit', edit_project_path(@project) %> |
+
+    app/views/projects/show.html.erb:18
+    app/controllers/projects_controller.rb:18:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (31.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-10 15:49:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+ERROR: compiling _run_erb_app47views47projects47show46html46erb RAISED compile error
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:23: syntax error, unexpected kENSURE, expecting ')'
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:25: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47projects47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Id:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.id ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Title:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.title ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Description:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.description ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Days:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.resources#count ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Edit', edit_project_path(@project) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat(( link_to 'Back', projects_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:25:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/marache/Projects/tasktracker3/app/controllers/projects_controller.rb:18:in `show'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/marache/Projects/tasktracker3/script/server:3
+-e:1:in `load'
+-e:1
+
+ActionView::TemplateError (compile error
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:23: syntax error, unexpected kENSURE, expecting ')'
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:25: syntax error, unexpected kEND, expecting ')') on line #23 of app/views/projects/show.html.erb:
+20: 
+21: <%= link_to 'Edit', edit_project_path(@project) %> |
+22: <%= link_to 'Back', projects_path %>
+
+    app/views/projects/show.html.erb:25:in `compile!'
+    app/controllers/projects_controller.rb:18:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (68.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-10 15:50:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+ERROR: compiling _run_erb_app47views47projects47show46html46erb RAISED compile error
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:23: syntax error, unexpected kENSURE, expecting ')'
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:25: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47projects47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Id:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.id ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Title:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.title ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Description:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.description ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Days:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.resources#size ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Edit', edit_project_path(@project) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat(( link_to 'Back', projects_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:25:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/marache/Projects/tasktracker3/app/controllers/projects_controller.rb:18:in `show'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/marache/Projects/tasktracker3/script/server:3
+-e:1:in `load'
+-e:1
+
+ActionView::TemplateError (compile error
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:23: syntax error, unexpected kENSURE, expecting ')'
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:25: syntax error, unexpected kEND, expecting ')') on line #23 of app/views/projects/show.html.erb:
+20: 
+21: <%= link_to 'Edit', edit_project_path(@project) %> |
+22: <%= link_to 'Back', projects_path %>
+
+    app/views/projects/show.html.erb:25:in `compile!'
+    app/controllers/projects_controller.rb:18:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (194.4ms)
+Rendered rescues/_request_and_response (2.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-10 15:50:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;36;1mResource Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: resources.project_id: SELECT * FROM "resources" WHERE ("resources".project_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: resources.project_id: SELECT * FROM "resources" WHERE ("resources".project_id = 1) ) on line #18 of app/views/projects/show.html.erb:
+15: 
+16: <p>
+17:   <b>Days:</b>
+18:   <%=h @project.resources %>
+19: </p>
+20: 
+21: <%= link_to 'Edit', edit_project_path(@project) %> |
+
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/erb.rb:756:in `h'
+    app/views/projects/show.html.erb:18
+    app/controllers/projects_controller.rb:18:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (50.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-10 15:59:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+ERROR: compiling _run_erb_app47views47projects47show46html46erb RAISED compile error
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:23: syntax error, unexpected kENSURE, expecting ')'
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:25: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47projects47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Id:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.id ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Title:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.title ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Description:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.description ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Days:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( @project.resources#size ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Edit', edit_project_path(@project) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat(( link_to 'Back', projects_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:25:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/marache/Projects/tasktracker3/app/controllers/projects_controller.rb:18:in `show'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/marache/Projects/tasktracker3/script/server:3
+-e:1:in `load'
+-e:1
+
+ActionView::TemplateError (compile error
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:23: syntax error, unexpected kENSURE, expecting ')'
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:25: syntax error, unexpected kEND, expecting ')') on line #23 of app/views/projects/show.html.erb:
+20: 
+21: <%= link_to 'Edit', edit_project_path(@project) %> |
+22: <%= link_to 'Back', projects_path %>
+
+    app/views/projects/show.html.erb:25:in `compile!'
+    app/controllers/projects_controller.rb:18:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (99.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-10 16:00:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;35;1mResource Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: resources.project_id: SELECT * FROM "resources" WHERE ("resources".project_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: resources.project_id: SELECT * FROM "resources" WHERE ("resources".project_id = 1) ) on line #18 of app/views/projects/show.html.erb:
+15: 
+16: <p>
+17:   <b>Days:</b>
+18:   <%=h @project.resources %>
+19: </p>
+20: 
+21: <%= link_to 'Edit', edit_project_path(@project) %> |
+
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/erb.rb:756:in `h'
+    app/views/projects/show.html.erb:18
+    app/controllers/projects_controller.rb:18:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (167.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100610081123)
+Migrating to CreateResources (20100610081858)
+Migrating to CreateActivities (20100610124557)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("activities")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("resources")[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-06-10 16:01:43) [GET]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 91ms (View: 61, DB: 0) | 200 OK [http://localhost/projects/]
+
+
+Processing ProjectsController#edit (for 127.0.0.1 at 2010-06-10 16:01:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/edit
+Completed in 60ms (View: 28, DB: 0) | 200 OK [http://localhost/projects/1/edit]
+
+
+Processing ProjectsController#update (for 127.0.0.1 at 2010-06-10 16:01:50) [PUT]
+  Parameters: {"commit"=>"Update", "project"=>{"title"=>"Test", "id"=>"1", "description"=>"Toto"}, "authenticity_token"=>"dTG3vGbxgkCAyCtUc7dSL7XVO5P2Z0pbtNRc1cE81o8=", "id"=>"1"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Redirected to http://localhost:3000/projects/1
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/projects/1]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-10 16:01:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;36;1mResource Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: resources.project_id: SELECT * FROM "resources" WHERE ("resources".project_id = 1) [0m
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: resources.project_id: SELECT * FROM "resources" WHERE ("resources".project_id = 1) ) on line #18 of app/views/projects/show.html.erb:
+15: 
+16: <p>
+17:   <b>Days:</b>
+18:   <%=h @project.resources %>
+19: </p>
+20: 
+21: <%= link_to 'Edit', edit_project_path(@project) %> |
+
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/erb.rb:756:in `h'
+    app/views/projects/show.html.erb:18
+    app/controllers/projects_controller.rb:18:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (82.3ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-06-11 11:01:03) [GET]
+  [4;36;1mProject Load (0.7ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 105ms (View: 71, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ResourcesController#index (for 127.0.0.1 at 2010-06-11 11:01:08) [GET]
+  [4;35;1mResource Load (0.4ms)[0m   [0mSELECT * FROM "resources" [0m
+Rendering template within layouts/resources
+Rendering resources/index
+Completed in 28ms (View: 17, DB: 0) | 200 OK [http://localhost/resources]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-11 11:01:24) [GET]
+
+ActionController::RoutingError (No route matches "/arctivities" with {:method=>:get}):
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-11 11:01:27) [GET]
+
+ActionController::RoutingError (No route matches "/artivities" with {:method=>:get}):
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-11 11:01:33) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 77ms (View: 49, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-11 11:01:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mActivity Load (0.2ms)[0m   [0mSELECT * FROM "activities" WHERE ("activities"."id" = 1) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 26ms (View: 21, DB: 0) | 200 OK [http://localhost/activities/1]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-11 11:01:39) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-11 11:01:40) [GET]
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" [0m
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM "resources" [0m
+Completed in 105ms (View: 101, DB: 0) | 200 OK [http://localhost/activities/new]
+
+
+Processing ActivitiesController#create (for 127.0.0.1 at 2010-06-11 11:01:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NXYTxzUMM0XRb9pw5Ncehcb+l0U1uYdJow41f/GHRZk=", "activity"=>{"day(3i)"=>"11", "project_id"=>"", "resource_id"=>"2", "day(1i)"=>"2010", "day(2i)"=>"6"}}
+  [4;35;1mActivity Create (0.5ms)[0m   [0mINSERT INTO "activities" ("project_id", "updated_at", "resource_id", "day", "created_at") VALUES(NULL, '2010-06-11 09:01:45', 2, '2010-06-11', '2010-06-11 09:01:45')[0m
+Redirected to http://localhost:3000/activities/2
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/activities]
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-11 11:01:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mActivity Load (0.2ms)[0m   [0;1mSELECT * FROM "activities" WHERE ("activities"."id" = 2) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #8 of app/views/activities/show.html.erb:
+5: 
+6: <p>
+7:   <b>Project:</b>
+8:   <%=h @activity.project.title %>
+9: </p>
+10: 
+11: <p>
+
+    app/views/activities/show.html.erb:8
+    app/controllers/activities_controller.rb:18:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (81.1ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100610081123)
+Migrating to CreateResources (20100610081858)
+Migrating to CreateActivities (20100610124557)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("activities")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("projects")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("resources")[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-06-11 11:12:07) [GET]
+  [4;36;1mProject Load (0.4ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 52ms (View: 31, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-11 11:12:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;36;1mActivity Load (0.2ms)[0m   [0;1mSELECT * FROM "activities" WHERE ("activities".project_id = 1) [0m
+Completed in 42ms (View: 10, DB: 1) | 200 OK [http://localhost/projects/1]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-11 11:12:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+ERROR: compiling _run_erb_app47views47projects47show46html46erb RAISED compile error
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:23: syntax error, unexpected kENSURE, expecting ')'
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:25: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47projects47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Id:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.id ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Title:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.title ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Description:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.description ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Days:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.activities#size ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Edit', edit_project_path(@project) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat(( link_to 'Back', projects_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:25:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/marache/Projects/tasktracker3/app/controllers/projects_controller.rb:18:in `show'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/marache/Projects/tasktracker3/script/server:3
+-e:1:in `load'
+-e:1
+
+ActionView::TemplateError (compile error
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:23: syntax error, unexpected kENSURE, expecting ')'
+/Users/marache/Projects/tasktracker3/app/views/projects/show.html.erb:25: syntax error, unexpected kEND, expecting ')') on line #23 of app/views/projects/show.html.erb:
+20: 
+21: <%= link_to 'Edit', edit_project_path(@project) %> |
+22: <%= link_to 'Back', projects_path %>
+
+    app/views/projects/show.html.erb:25:in `compile!'
+    app/controllers/projects_controller.rb:18:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (32.3ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-11 11:12:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "activities" WHERE ("activities".project_id = 1) [0m
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/projects/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-11 11:12:55) [GET]
+
+ActionController::RoutingError (No route matches "/acitivities" with {:method=>:get}):
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-11 11:12:58) [GET]
+  [4;36;1mActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #13 of app/views/activities/index.html.erb:
+10: <% @activities.each do |activity| %>
+11:   <tr>
+12:     <td><%=h activity.day %></td>
+13:     <td><%=h activity.project.title %></td>
+14:     <td><%=h activity.resource.name %></td>
+15:     <td><%= link_to 'Show', activity %></td>
+16:     <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+
+    app/views/activities/index.html.erb:13
+    app/views/activities/index.html.erb:10:in `each'
+    app/views/activities/index.html.erb:10
+    app/controllers/activities_controller.rb:7:in `index'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-11 11:13:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mActivity Load (0.2ms)[0m   [0mSELECT * FROM "activities" WHERE ("activities"."id" = 1) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/activities/1]
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-11 11:13:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mActivity Load (0.2ms)[0m   [0;1mSELECT * FROM "activities" WHERE ("activities"."id" = 2) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #8 of app/views/activities/show.html.erb:
+5: 
+6: <p>
+7:   <b>Project:</b>
+8:   <%=h @activity.project.title %>
+9: </p>
+10: 
+11: <p>
+
+    app/views/activities/show.html.erb:8
+    app/controllers/activities_controller.rb:18:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (31.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#2 (for 127.0.0.1 at 2010-06-11 11:13:47) [GET]
+  Parameters: {"id"=>"delete"}
+
+ActionController::UnknownAction (No action responded to 2. Actions: create, destroy, edit, index, new, show, and update):
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActivitiesController#2 (for 127.0.0.1 at 2010-06-11 11:13:53) [GET]
+  Parameters: {"id"=>"destroy"}
+
+ActionController::UnknownAction (No action responded to 2. Actions: create, destroy, edit, index, new, show, and update):
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActivitiesController#edit (for 127.0.0.1 at 2010-06-11 11:14:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mActivity Load (0.1ms)[0m   [0mSELECT * FROM "activities" WHERE ("activities"."id" = 2) [0m
+Rendering template within layouts/activities
+Rendering activities/edit
+  [4;36;1mResource Load (0.2ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 2) [0m
+Completed in 28ms (View: 24, DB: 0) | 200 OK [http://localhost/activities/2/edit]
+
+
+Processing ActivitiesController#edit (for 127.0.0.1 at 2010-06-11 11:14:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mActivity Load (0.2ms)[0m   [0mSELECT * FROM "activities" WHERE ("activities"."id" = 2) [0m
+Rendering template within layouts/activities
+Rendering activities/edit
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" [0m
+  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM "resources" [0m
+Completed in 26ms (View: 21, DB: 1) | 200 OK [http://localhost/activities/2/edit]
+
+
+Processing ActivitiesController#update (for 127.0.0.1 at 2010-06-11 11:14:33) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"NXYTxzUMM0XRb9pw5Ncehcb+l0U1uYdJow41f/GHRZk=", "activity"=>{"day(3i)"=>"11", "project_id"=>"1", "resource_id"=>"2", "day(1i)"=>"2010", "day(2i)"=>"6"}, "id"=>"2"}
+  [4;36;1mActivity Load (0.2ms)[0m   [0;1mSELECT * FROM "activities" WHERE ("activities"."id" = 2) [0m
+  [4;35;1mActivity Update (0.5ms)[0m   [0mUPDATE "activities" SET "project_id" = 1, "updated_at" = '2010-06-11 09:14:33' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/activities/2
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/activities/2]
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-11 11:14:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mActivity Load (0.2ms)[0m   [0;1mSELECT * FROM "activities" WHERE ("activities"."id" = 2) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;36;1mResource Load (0.1ms)[0m   [0;1mSELECT * FROM "resources" WHERE ("resources"."id" = 2) [0m
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/activities/2]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-11 11:14:36) [GET]
+  [4;35;1mActivity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.1ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mResource Load (0.2ms)[0m   [0mSELECT * FROM "resources" WHERE ("resources"."id" = 2) [0m
+Completed in 18ms (View: 14, DB: 1) | 200 OK [http://localhost/activities]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-11 11:14:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "activities" WHERE ("activities".project_id = 1) [0m
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/projects/1]
