@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
   # GET /projects.xml
   def index
     @projects = Project.all
+    @page_title = "Projects"
 
     respond_to do |format|
       format.html # index.html.erb
