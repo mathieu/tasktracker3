@@ -12,11 +12,6 @@
     <%= collection_select(:activity, :project_id, Project.all, :id, :title, {:prompt => true}) %>
   </p>
   <p>
-    <%= f.label :resource %><br />
-    <%= collection_select(:activity, :resource_id, Resource.all, :id, :name, {:prompt => true}) %>
-
-  </p>
-  <p>
     <%= f.submit 'Create' %>
   </p>
 <% end %>

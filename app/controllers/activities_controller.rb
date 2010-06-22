@@ -1,4 +1,7 @@
 class ActivitiesController < ApplicationController
+
+  before_filter :login_required
+
   # GET /activities
   # GET /activities.xml
   def index
@@ -41,6 +44,7 @@ class ActivitiesController < ApplicationController
   # POST /activities.xml
   def create
     @activity = Activity.new(params[:activity])
+    @activity.user = current_user
 
     respond_to do |format|
       if @activity.save

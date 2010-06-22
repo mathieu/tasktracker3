@@ -3,7 +3,7 @@ class CreateActivities < ActiveRecord::Migration
     create_table :activities do |t|
       t.date :day
       t.references :project
-      t.references :resource
+      t.references :user
 
       t.timestamps
     end

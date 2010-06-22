@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20100622121454) do
   create_table "activities", :force => true do |t|
     t.date     "day"
     t.integer  "project_id"
-    t.integer  "resource_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

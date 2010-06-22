@@ -2190,3 +2190,411 @@ Migrating to CreateUsers (20100622121454)
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("projects")[0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_users_on_login')[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-22 14:33:06) [GET]
+
+ActionController::RoutingError (No route matches "/project" with {:method=>:get}):
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-06-22 14:33:09) [GET]
+  [4;36;1mProject Load (0.4ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 141ms (View: 110, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-06-22 14:33:11) [GET]
+Rendering template within layouts/projects
+Rendering projects/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2010-06-22 14:33:17) [POST]
+  Parameters: {"commit"=>"Create", "project"=>{"title"=>"toto", "id"=>"1", "description"=>""}, "authenticity_token"=>"PFjaxuAP8ue0/R7Ofk9tXpX4LVUDHXWwPkLw1MB+vIc="}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("updated_at", "title", "description", "created_at") VALUES('2010-06-22 12:33:18', 'toto', '', '2010-06-22 12:33:18')[0m
+Redirected to http://localhost:3000/projects/1
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-22 14:33:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "activities" WHERE ("activities".project_id = 1) [0m
+Completed in 41ms (View: 36, DB: 0) | 200 OK [http://localhost/projects/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-22 14:33:22) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create and new):
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-06-22 14:33:29) [GET]
+Rendering users/new
+Completed in 29ms (View: 8, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-22 14:33:38) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"mat", "password"=>"mat", "login"=>"mat", "email"=>""}, "commit"=>"Sign up", "authenticity_token"=>"PFjaxuAP8ue0/R7Ofk9tXpX4LVUDHXWwPkLw1MB+vIc="}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'mat') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = '') LIMIT 1[0m
+Rendering users/new
+Completed in 67ms (View: 10, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-22 14:34:00) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"pirouli", "password"=>"pirouli", "login"=>"mat", "email"=>"mathieu.marache@cstb.fr"}, "commit"=>"Sign up", "authenticity_token"=>"PFjaxuAP8ue0/R7Ofk9tXpX4LVUDHXWwPkLw1MB+vIc="}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'mat') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'mathieu.marache@cstb.fr') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('', 'ae7112a3bd7384e131a89b4b99e509d8252d1161', '2010-06-22 12:34:00', '14ab6cea2bb608f605acf75e1da70c7aa1fa821d', NULL, NULL, 'mat', 'mathieu.marache@cstb.fr', '2010-06-22 12:34:00')[0m
+Redirected to http://localhost:3000/
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-22 14:34:03) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create and new):
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-22 14:34:09) [GET]
+
+ActionController::RoutingError (No route matches "/activity" with {:method=>:get}):
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-22 14:34:15) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mActivity Load (0.1ms)[0m   [0;1mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+Completed in 43ms (View: 34, DB: 0) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-22 14:35:04) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Completed in 152ms (View: 143, DB: 0) | 200 OK [http://localhost/activities/new]
+
+
+Processing ActivitiesController#create (for 127.0.0.1 at 2010-06-22 14:35:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"PFjaxuAP8ue0/R7Ofk9tXpX4LVUDHXWwPkLw1MB+vIc=", "activity"=>{"day(3i)"=>"22", "project_id"=>"1", "day(1i)"=>"2010", "day(2i)"=>"6"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mActivity Create (0.3ms)[0m   [0;1mINSERT INTO "activities" ("project_id", "updated_at", "resource_id", "day", "created_at") VALUES(1, '2010-06-22 12:35:09', NULL, '2010-06-22', '2010-06-22 12:35:09')[0m
+Redirected to http://localhost:3000/activities/1
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/activities]
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-22 14:35:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mActivity Load (0.1ms)[0m   [0;1mSELECT * FROM "activities" WHERE ("activities"."id" = 1) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `resource' for #<Activity:0x247f37c>) on line #13 of app/views/activities/show.html.erb:
+10: 
+11: <p>
+12:   <b>Resource:</b>
+13:   <%=h @activity.resource.name %>
+14: </p>
+15: 
+16: 
+
+    app/views/activities/show.html.erb:13
+    app/controllers/activities_controller.rb:21:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (32.3ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-22 14:36:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mActivity Load (0.1ms)[0m   [0mSELECT * FROM "activities" WHERE ("activities"."id" = 1) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+  [4;36;1mProject Load (0.1ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `resource' for #<Activity:0x22c3290>) on line #13 of app/views/activities/show.html.erb:
+10: 
+11: <p>
+12:   <b>Resource:</b>
+13:   <%=h @activity.resource.name %>
+14: </p>
+15: 
+16: 
+
+    app/views/activities/show.html.erb:13
+    app/controllers/activities_controller.rb:21:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (31.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-22 14:36:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mActivity Load (0.2ms)[0m   [0;1mSELECT * FROM "activities" WHERE ("activities"."id" = 1) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #13 of app/views/activities/show.html.erb:
+10: 
+11: <p>
+12:   <b>User:</b>
+13:   <%=h @activity.user.name %>
+14: </p>
+15: 
+16: 
+
+    app/views/activities/show.html.erb:13
+    app/controllers/activities_controller.rb:21:in `show'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-22 14:37:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mActivity Load (0.2ms)[0m   [0mSELECT * FROM "activities" WHERE ("activities"."id" = 1) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://localhost/activities/1]
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-22 14:37:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mActivity Load (0.2ms)[0m   [0;1mSELECT * FROM "activities" WHERE ("activities"."id" = 1) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/activities/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (23.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (12.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100610081123)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100610081123')[0m
+Migrating to CreateActivities (20100610124557)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "day" date, "project_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100610124557')[0m
+Migrating to CreateUsers (20100622121454)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(40), "name" varchar(100) DEFAULT '', "email" varchar(100), "crypted_password" varchar(40), "salt" varchar(40), "created_at" datetime, "updated_at" datetime, "remember_token" varchar(40), "remember_token_expires_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_login" ON "users" ("login")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100622121454')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("activities")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("projects")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_users_on_login')[0m
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-22 14:40:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/activities/1]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-22 14:40:21) [GET]
+Rendering sessions/new
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-22 14:40:38) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create and new):
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2010-06-22 14:40:45) [GET]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-06-22 14:40:47) [GET]
+Rendering template within layouts/projects
+Rendering projects/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2010-06-22 14:40:56) [POST]
+  Parameters: {"commit"=>"Create", "project"=>{"title"=>"P-toto", "id"=>"1", "description"=>""}, "authenticity_token"=>"PFjaxuAP8ue0/R7Ofk9tXpX4LVUDHXWwPkLw1MB+vIc="}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("updated_at", "title", "description", "created_at") VALUES('2010-06-22 12:40:56', 'P-toto', '', '2010-06-22 12:40:56')[0m
+Redirected to http://localhost:3000/projects/1
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2010-06-22 14:40:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "activities" WHERE ("activities".project_id = 1) [0m
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/projects/1]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-06-22 14:42:27) [GET]
+Rendering users/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-22 14:42:39) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"", "password"=>"olms4Reef4", "login"=>"", "email"=>"cstbSuperAdmin"}, "commit"=>"Sign up", "authenticity_token"=>"PFjaxuAP8ue0/R7Ofk9tXpX4LVUDHXWwPkLw1MB+vIc="}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'cstbsuperadmin') LIMIT 1[0m
+Rendering users/new
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-22 14:42:41) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"pirouli", "password"=>"pirouli", "login"=>"mat", "email"=>"mathieu.marache@cstb.fr"}, "commit"=>"Sign up", "authenticity_token"=>"PFjaxuAP8ue0/R7Ofk9tXpX4LVUDHXWwPkLw1MB+vIc="}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'mat') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'mathieu.marache@cstb.fr') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "email", "created_at") VALUES('', 'ec0fd5a1819393b61a3563e7760b295358752a8a', '2010-06-22 12:42:41', '2ed9c363ae6e5b948d829830d5d51d3e3a0847b6', NULL, NULL, 'mat', 'mathieu.marache@cstb.fr', '2010-06-22 12:42:41')[0m
+Redirected to http://localhost:3000/activities/1
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/users]
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-22 14:42:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mActivity Load (0.1ms)[0m   [0mSELECT * FROM "activities" WHERE ("activities"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Activity with ID=1):
+  app/controllers/activities_controller.rb:19:in `show'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (23.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-22 14:42:47) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create and new):
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2010-06-22 14:42:50) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mActivity Load (0.1ms)[0m   [0mSELECT * FROM "activities" [0m
+Rendering template within layouts/activities
+Rendering activities/index
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/activities]
+
+
+Processing ActivitiesController#new (for 127.0.0.1 at 2010-06-22 14:42:52) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/activities
+Rendering activities/new
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" [0m
+Completed in 21ms (View: 11, DB: 0) | 200 OK [http://localhost/activities/new]
+
+
+Processing ActivitiesController#create (for 127.0.0.1 at 2010-06-22 14:43:01) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"PFjaxuAP8ue0/R7Ofk9tXpX4LVUDHXWwPkLw1MB+vIc=", "activity"=>{"day(3i)"=>"16", "project_id"=>"1", "day(1i)"=>"2010", "day(2i)"=>"6"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mActivity Create (0.3ms)[0m   [0mINSERT INTO "activities" ("project_id", "updated_at", "day", "user_id", "created_at") VALUES(1, '2010-06-22 12:43:01', '2010-06-16', 1, '2010-06-22 12:43:01')[0m
+Redirected to http://localhost:3000/activities/1
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/activities]
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-22 14:43:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mActivity Load (0.2ms)[0m   [0mSELECT * FROM "activities" WHERE ("activities"."id" = 1) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/activities/1]
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-22 14:43:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mActivity Load (0.2ms)[0m   [0mSELECT * FROM "activities" WHERE ("activities"."id" = 1) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 24ms (View: 11, DB: 1) | 200 OK [http://localhost/activities/1]
+
+
+Processing ActivitiesController#show (for 127.0.0.1 at 2010-06-22 14:43:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mActivity Load (0.2ms)[0m   [0mSELECT * FROM "activities" WHERE ("activities"."id" = 1) [0m
+Rendering template within layouts/activities
+Rendering activities/show
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 67ms (View: 10, DB: 1) | 200 OK [http://localhost/activities/1]
