@@ -1,0 +1,11 @@
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2010-07-10 14:24:08 +0200
+  Processing by Rails::InfoController#properties as HTML
+DEPRECATION WARNING: All middlewares in the chaing are active since the laziness was removed from the middleware stack. (called from block in <module:Info> at /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/info.rb:92)
+  [1m[36mSQL (23.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendered inline template (1.2ms)
+Completed 200 OK in 98ms (Views: 3.4ms | ActiveRecord: 23.3ms)
