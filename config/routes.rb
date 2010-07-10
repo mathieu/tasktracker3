@@ -1,4 +1,6 @@
 TaskTracker3::Application.routes.draw do |map|
+  resources :projects
+
   devise_for :users
 
   # The priority is based upon order of creation:
@@ -51,7 +53,7 @@ TaskTracker3::Application.routes.draw do |map|
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
-  root :to => "home#index"
+  root :to => "projects#index"
 
   # See how all your routes lay out with "rake routes"
 
