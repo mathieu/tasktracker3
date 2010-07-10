@@ -9,3 +9,26 @@ DEPRECATION WARNING: All middlewares in the chaing are active since the laziness
 [0m
 Rendered inline template (1.2ms)
 Completed 200 OK in 98ms (Views: 3.4ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2010-07-10 14:45:06 +0200
+
+ActionController::RoutingError (No route matches "/home"):
+/home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/show_exceptions.rb:55:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/logger.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `block in call'
+  <internal:prelude>:10:in `synchronize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:145:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:81:in `method_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/log_tailer.rb:15:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (10.0ms)
