@@ -1,4 +1,6 @@
 TaskTracker3::Application.routes.draw do |map|
+  resources :activities
+
   resources :projects
 
   devise_for :users
