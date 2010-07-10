@@ -14,7 +14,8 @@
   <tr>
     <td><%= activity.date %></td>
     <td><%= activity.description %></td>
-    <td><%= activity.project %></td>
+    <td><%= activity.project.name %></td>
+    <td><%= activity.user.email %></td>
     <td><%= link_to 'Show', activity %></td>
     <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
     <td><%= link_to 'Destroy', activity, :confirm => 'Are you sure?', :method => :delete %></td>

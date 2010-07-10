@@ -4,6 +4,7 @@ class CreateActivities < ActiveRecord::Migration
       t.date :date
       t.string :description
       t.references :project
+      t.references :user
 
       t.timestamps
     end
