@@ -205,3 +205,836 @@ Started GET "/" for 127.0.0.1 at 2010-07-10 15:58:43 +0200
   [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
 Rendered projects/index.html.erb within layouts/application (19.7ms)
 Completed 200 OK in 51ms (Views: 26.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:02:56 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered projects/index.html.erb within layouts/application (125.1ms)
+Completed 200 OK in 156ms (Views: 130.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2010-07-10 16:03:05 +0200
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 52ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:03:05 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.9ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 82ms (Views: 56.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:05:10 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Rendered projects/index.html.erb within layouts/application (258.4ms)
+Completed   in 289ms
+
+ActionView::Template::Error (undefined method `show_title?' for #<#<Class:0x9705cfc>:0x96d96d4>):
+    21:         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    22:       <% end %>
+    23:       
+    24:       <% if show_title? %>
+    25:         <h1><%= yield(:title) %></h1>
+    26:       <% end %>
+    27:       
+/home/marache/Documents/Rails/tt3/app/views/layouts/application.html.erb:24:in `_render_template_241379169_78969550_842273837'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_view/template.rb:134:in `block in render'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications.rb:48:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_view/template.rb:126:in `render'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_view/render/layouts.rb:75:in `_render_layout'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_view/render/rendering.rb:61:in `block in _render_template'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications.rb:48:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_view/render/rendering.rb:55:in `_render_template'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_view/render/rendering.rb:25:in `render'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/rendering.rb:114:in `_render_template'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/rendering.rb:92:in `render'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rendering.rb:17:in `render'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:39:in `block (2 levels) in render'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:39:in `block in render'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:77:in `cleanup_view_runtime'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:38:in `render'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/mime_responds.rb:258:in `block in retrieve_response_from_mimes'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/mime_responds.rb:189:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/mime_responds.rb:189:in `respond_to'
+  /home/marache/Documents/Rails/tt3/app/controllers/projects_controller.rb:7:in `index'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/base.rb:145:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:433:in `_run__596047323__process_action__417097887__callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:408:in `_run_process_action_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:29:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications.rb:48:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:28:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rescue.rb:8:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/base.rb:114:in `process'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/rendering.rb:40:in `process'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal.rb:126:in `dispatch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal.rb:166:in `block in action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/route_set.rb:148:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:89:in `block in recognize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:94:in `optimized_each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:88:in `recognize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/route_set.rb:139:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:457:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:35:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/head.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/flash.rb:177:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/session/abstract_store.rb:106:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/cookies.rb:235:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:31:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:11:in `cache'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/connection_adapters/abstract/connection_pool.rb:365:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:414:in `_run_call_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/sendfile.rb:105:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/show_exceptions.rb:48:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/logger.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `block in call'
+  <internal:prelude>:10:in `synchronize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:145:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:81:in `method_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/log_tailer.rb:15:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (139.7ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (151.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:06:03 +0200
+  Processing by ProjectsController#index as HTML
+Completed   in 18ms
+
+SyntaxError (/home/marache/Documents/Rails/tt3/app/models/project.rb:2: syntax error, unexpected '=', expecting keyword_end
+  :show_title = true
+               ^):
+/home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:418:in `load'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:418:in `block in load_file'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:554:in `new_constants_in'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:417:in `load_file'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:313:in `require_or_load'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:455:in `load_missing_constant'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:156:in `block in const_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `const_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:467:in `load_missing_constant'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:156:in `block in const_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `const_missing'
+  /home/marache/Documents/Rails/tt3/app/controllers/projects_controller.rb:5:in `index'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/base.rb:145:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:433:in `_run__596047323__process_action__417097887__callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:408:in `_run_process_action_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:29:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications.rb:48:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:28:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rescue.rb:8:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/base.rb:114:in `process'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/rendering.rb:40:in `process'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal.rb:126:in `dispatch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal.rb:166:in `block in action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/route_set.rb:148:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:89:in `block in recognize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:94:in `optimized_each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:88:in `recognize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/route_set.rb:139:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:457:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:35:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/head.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/flash.rb:177:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/session/abstract_store.rb:106:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/cookies.rb:235:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:31:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:11:in `cache'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/connection_adapters/abstract/connection_pool.rb:365:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:414:in `_run_call_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/sendfile.rb:105:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/show_exceptions.rb:48:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/logger.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `block in call'
+  <internal:prelude>:10:in `synchronize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:145:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:81:in `method_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/log_tailer.rb:15:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (72.1ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (83.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:06:24 +0200
+  Processing by ProjectsController#index as HTML
+Completed   in 18ms
+
+SyntaxError (/home/marache/Documents/Rails/tt3/app/models/project.rb:2: syntax error, unexpected tASSOC, expecting keyword_end
+  :show_title => true
+                ^):
+/home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:418:in `load'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:418:in `block in load_file'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:554:in `new_constants_in'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:417:in `load_file'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:313:in `require_or_load'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:455:in `load_missing_constant'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:156:in `block in const_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `const_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:467:in `load_missing_constant'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:156:in `block in const_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `const_missing'
+  /home/marache/Documents/Rails/tt3/app/controllers/projects_controller.rb:5:in `index'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/base.rb:145:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:433:in `_run__596047323__process_action__417097887__callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:408:in `_run_process_action_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:29:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications.rb:48:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:28:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rescue.rb:8:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/base.rb:114:in `process'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/rendering.rb:40:in `process'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal.rb:126:in `dispatch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal.rb:166:in `block in action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/route_set.rb:148:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:89:in `block in recognize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:94:in `optimized_each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:88:in `recognize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/route_set.rb:139:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:457:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:35:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/head.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/flash.rb:177:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/session/abstract_store.rb:106:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/cookies.rb:235:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:31:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:11:in `cache'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/connection_adapters/abstract/connection_pool.rb:365:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:414:in `_run_call_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/sendfile.rb:105:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/show_exceptions.rb:48:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/logger.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `block in call'
+  <internal:prelude>:10:in `synchronize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:145:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:81:in `method_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/log_tailer.rb:15:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (128.9ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (139.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:06:37 +0200
+  Processing by ProjectsController#index as HTML
+Completed   in 19ms
+
+SyntaxError (/home/marache/Documents/Rails/tt3/app/models/project.rb:2: syntax error, unexpected tASSOC, expecting keyword_end
+  show_title => true
+               ^):
+/home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:418:in `load'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:418:in `block in load_file'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:554:in `new_constants_in'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:417:in `load_file'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:313:in `require_or_load'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:455:in `load_missing_constant'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:156:in `block in const_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `const_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:467:in `load_missing_constant'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:156:in `block in const_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `const_missing'
+  /home/marache/Documents/Rails/tt3/app/controllers/projects_controller.rb:5:in `index'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/base.rb:145:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:433:in `_run__596047323__process_action__417097887__callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:408:in `_run_process_action_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:29:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications.rb:48:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:28:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rescue.rb:8:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/base.rb:114:in `process'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/rendering.rb:40:in `process'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal.rb:126:in `dispatch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal.rb:166:in `block in action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/route_set.rb:148:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:89:in `block in recognize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:94:in `optimized_each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:88:in `recognize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/route_set.rb:139:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:457:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:35:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/head.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/flash.rb:177:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/session/abstract_store.rb:106:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/cookies.rb:235:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:31:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:11:in `cache'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/connection_adapters/abstract/connection_pool.rb:365:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:414:in `_run_call_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/sendfile.rb:105:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/show_exceptions.rb:48:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/logger.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `block in call'
+  <internal:prelude>:10:in `synchronize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:145:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:81:in `method_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/log_tailer.rb:15:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (75.1ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (85.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:26:40 +0200
+  Processing by ProjectsController#index as HTML
+Completed   in 19ms
+
+SyntaxError (/home/marache/Documents/Rails/tt3/app/models/project.rb:2: syntax error, unexpected tASSOC, expecting keyword_end
+  show_title => true
+               ^):
+/home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:418:in `load'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:418:in `block in load_file'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:554:in `new_constants_in'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:417:in `load_file'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:313:in `require_or_load'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:455:in `load_missing_constant'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:156:in `block in const_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `const_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:467:in `load_missing_constant'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:156:in `block in const_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/dependencies.rb:154:in `const_missing'
+  /home/marache/Documents/Rails/tt3/app/controllers/projects_controller.rb:5:in `index'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/base.rb:145:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:433:in `_run__596047323__process_action__417097887__callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:408:in `_run_process_action_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:29:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications.rb:48:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:28:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rescue.rb:8:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/base.rb:114:in `process'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/rendering.rb:40:in `process'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal.rb:126:in `dispatch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal.rb:166:in `block in action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/route_set.rb:148:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:89:in `block in recognize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:94:in `optimized_each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:88:in `recognize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/route_set.rb:139:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:457:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:35:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/head.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/flash.rb:177:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/session/abstract_store.rb:106:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/cookies.rb:235:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:31:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:11:in `cache'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/connection_adapters/abstract/connection_pool.rb:365:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:414:in `_run_call_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/sendfile.rb:105:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/show_exceptions.rb:48:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/logger.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `block in call'
+  <internal:prelude>:10:in `synchronize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:145:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:81:in `method_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/log_tailer.rb:15:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (143.8ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (154.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:27:25 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 110ms (Views: 73.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2010-07-10 16:28:12 +0200
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/devise-1.1.rc2/app/views/devise/shared/_links.erb (3.0ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/devise-1.1.rc2/app/views/devise/sessions/new.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 83ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2010-07-10 16:28:14 +0200
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"uEMUEVmij4T5lx/9hPGekUBBMeqXu1PYrigkdC5HefM=", "user"=>{"email"=>"m@toto.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'm@toto.fr') LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2010-07-10 14:28:15.045332', "sign_in_count" = 2, "updated_at" = '2010-07-10 14:28:15.046270' WHERE ("users"."id" = 1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 377ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:28:15 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered projects/index.html.erb within layouts/application (75.7ms)
+Completed 200 OK in 109ms (Views: 81.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:29:23 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.9ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered projects/index.html.erb within layouts/application (71.3ms)
+Completed 200 OK in 103ms (Views: 76.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:29:25 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered projects/index.html.erb within layouts/application (142.6ms)
+Completed 200 OK in 175ms (Views: 148.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:29:26 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered projects/index.html.erb within layouts/application (75.3ms)
+Completed 200 OK in 108ms (Views: 81.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 192.168.0.2 at 2010-07-10 16:30:34 +0200
+  Processing by ProjectsController#index as HTML
+Completed   in 1ms
+
+NoMethodError (undefined method `to_sym' for nil:NilClass):
+/home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/whiny_nil.rb:48:in `method_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rendering.rb:10:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rendering.rb:10:in `map'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:438:in `_run__596047323__process_action__417097887__callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:408:in `_run_process_action_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:29:in `block in process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/notifications.rb:48:in `instrument'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/instrumentation.rb:28:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rescue.rb:8:in `process_action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/base.rb:114:in `process'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/abstract_controller/rendering.rb:40:in `process'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal.rb:126:in `dispatch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_controller/metal.rb:166:in `block in action'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/route_set.rb:148:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:89:in `block in recognize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:94:in `optimized_each'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/code_generation.rb:88:in `recognize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.6.6/lib/rack/mount/route_set.rb:139:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/routing/route_set.rb:457:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:35:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/head.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/flash.rb:177:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/session/abstract_store.rb:106:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/cookies.rb:235:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:31:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:11:in `cache'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/query_cache.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.0.0.beta4/lib/active_record/connection_adapters/abstract/connection_pool.rb:365:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:414:in `_run_call_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/callbacks.rb:88:in `run_callbacks'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/sendfile.rb:105:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/show_exceptions.rb:48:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/logger.rb:14:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/runtime.rb:17:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.0.0.beta4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `block in call'
+  <internal:prelude>:10:in `synchronize'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/static.rb:30:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:145:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/application.rb:81:in `method_missing'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/railties-3.0.0.beta4/lib/rails/rack/log_tailer.rb:15:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+  /home/marache/.rvm/gems/ruby-1.9.2-head/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/marache/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (70.6ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.0.beta4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (81.3ms)
+
+
+Started GET "/" for 192.168.0.2 at 2010-07-10 16:32:02 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Rendered projects/index.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 78ms (Views: 52.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:36:01 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (77.5ms)
+Completed 200 OK in 109ms (Views: 85.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:36:08 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Rendered projects/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 55ms (Views: 28.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:37:28 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 143ms (Views: 27.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:37:59 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Rendered projects/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 49ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:38:32 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.8ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 49ms (Views: 25.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:38:33 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Rendered projects/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 52ms (Views: 27.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:38:33 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (1.1ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 53ms (Views: 28.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:38:33 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Rendered projects/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 50ms (Views: 25.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:38:35 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 58ms (Views: 33.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:38:35 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.9ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Rendered projects/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 120ms (Views: 31.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:38:35 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.9ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 64ms (Views: 36.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:38:36 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.7ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Rendered projects/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 49ms (Views: 25.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:38:36 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (1.1ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 51ms (Views: 26.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:48:51 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Rendered projects/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 52ms (Views: 26.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:50:20 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 145ms (Views: 28.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:50:27 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Rendered projects/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 50ms (Views: 25.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:50:28 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (1.1ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 52ms (Views: 26.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:50:29 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Rendered projects/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 84ms (Views: 49.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:50:29 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.9ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 94ms (Views: 55.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:50:30 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.7ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Rendered projects/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 57ms (Views: 29.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2010-07-10 16:51:42 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered projects/index.html.erb within layouts/application (182.2ms)
+Completed 200 OK in 304ms (Views: 187.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2010-07-10 16:52:00 +0200
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 109ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:52:00 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.8ms)[0m  SELECT "projects".* FROM "projects"
+Rendered projects/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 81ms (Views: 55.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2010-07-10 16:52:03 +0200
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/devise-1.1.rc2/app/views/devise/shared/_links.erb (2.9ms)
+Rendered /home/marache/.rvm/gems/ruby-1.9.2-head/gems/devise-1.1.rc2/app/views/devise/sessions/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 87ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2010-07-10 16:52:04 +0200
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"uEMUEVmij4T5lx/9hPGekUBBMeqXu1PYrigkdC5HefM=", "user"=>{"email"=>"m@toto.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'm@toto.fr') LIMIT 1[0m
+  [1m[35mSQL (2.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2010-07-10 14:52:05.366061', "last_sign_in_at" = '2010-07-10 14:28:15.045332', "sign_in_count" = 3, "updated_at" = '2010-07-10 14:52:05.367114' WHERE ("users"."id" = 1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 465ms
+
+
+Started GET "/" for 127.0.0.1 at 2010-07-10 16:52:05 +0200
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.9ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered projects/index.html.erb within layouts/application (96.9ms)
+Completed 200 OK in 134ms (Views: 102.7ms | ActiveRecord: 2.4ms)
