@@ -10,6 +10,10 @@
   <%= @project.UB %>
 </p>
 
+<p>
+  <b>Days:</b>
+  <%= @project.activities.size %>
+</p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

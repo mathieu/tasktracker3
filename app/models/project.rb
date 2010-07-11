@@ -1,3 +1,3 @@
 class Project < ActiveRecord::Base
-  has_many :activity
+  has_many :activities
 end
