@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  UB: MyString
+  name: P1
+  UB: UB1
 
 two:
-  name: MyString
-  UB: MyString
+  name: P2
+  UB: UB2
