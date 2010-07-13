@@ -25,4 +25,5 @@ class ActivityTest < ActiveSupport::TestCase
     assert !activity.valid?, "activity shouldn't be valid"
     assert activity.errors[:date].any? , "activity.errors[:date].any? should be true"
   end
+
 end

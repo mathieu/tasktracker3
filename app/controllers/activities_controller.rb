@@ -2,7 +2,7 @@ class ActivitiesController < ApplicationController
   # GET /activities
   # GET /activities.xml
   def index
-    @activities = Activity.all
+    @activities = current_user.activities.sort_by {|a| a.date}
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +25,7 @@ class ActivitiesController < ApplicationController
   # GET /activities/new.xml
   def new
     @activity = Activity.new
-
+    @activity.user = current_user
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @activity }

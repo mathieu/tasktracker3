@@ -8,16 +8,25 @@
 </head>
 <body>
     <div id="container">
-      <div id="user_nav">
-        <% if user_signed_in? %>
-          Signed in as <%= current_user.email %>. Not you?
+      <% if user_signed_in? %>
+
+        <div id="user_nav">
+          Signed in  : <b><%= current_user.email %></b> | 
           <%= link_to "Sign out", destroy_user_session_path %>
-        <% end %>
-      </div>
+        </div>
+        <ul id="list_nav">
+          <li><%= link_to "Projects", projects_path %></li>
+           <li><%= link_to "Activities", activities_path %></li>
+         </ul>
+
+      <% end %>
       
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
+
+    </div>
+    <div id="container">
       
       <% if show_title? %>
         <h1><%= yield(:title) %></h1>

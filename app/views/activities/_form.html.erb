@@ -23,7 +23,6 @@
     <%= f.label :project %><br />
     <%= collection_select(:activity, :project_id, Project.all, :id, :name, {:prompt => true}) %>
   </p>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
     <%= f.submit %>
   </div>
