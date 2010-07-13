@@ -1,13 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+a1:
   date: 2010-07-10
   description: MyString
-  project: 0
-  user: 0
+  project: :p1
+  user: :mat
 
-two:
+a2:
   date: 2010-07-11
   description: MyString
-  project: 0
-  user: 0
+  project: :p2
+  user: :mat

@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+p1:
   name: P1
   UB: UB1
 
-two:
+p2:
   name: P2
   UB: UB2

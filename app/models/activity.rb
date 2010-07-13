@@ -8,9 +8,14 @@ class Activity < ActiveRecord::Base
 
 protected
   def one_date_for_user
-    if !user.nil? and user.activities.size > 0
-      puts "Activities size = #{user.activities.size}"
-      errors.add(:date, 'you have already an activity recorded for this date') if user.activities.include?(:date)
+    unless user.nil?
+      user.activities.each do |a|
+        if a.date.eql?(date) 
+          errors.add(:one_date_for_user, 'you have already an activity recorded for this date')
+          break
+        end   
+      end
     end
   end
+  
 end
