@@ -3,11 +3,11 @@
 one:
   date: 2010-07-10
   description: MyString
-  project: 1
-  user: 1
+  project: 0
+  user: 0
 
 two:
   date: 2010-07-11
   description: MyString
-  project: 1
-  user: 1
+  project: 0
+  user: 0
