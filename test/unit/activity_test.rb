@@ -23,6 +23,6 @@ class ActivityTest < ActiveSupport::TestCase
     activity.user = users(:mat)
     activity.project = projects(:p1)
     assert !activity.valid?, "activity shouldn't be valid"
-    assert activity.errors[:one_date_for_user].any? , "activity.errors[:one_date_for_user].any? should be true"
+    assert activity.errors[:date].any? , "activity.errors[:date].any? should be true"
   end
 end
