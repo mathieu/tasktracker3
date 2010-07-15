@@ -31,7 +31,7 @@ TaskTracker3::Application.configure do
   # In production, Apache or nginx will already do this    
   # needed for Heroku
   config.serve_static_assets = true
-                                                                     <
+
   # Enable serving of images, stylesheets, and javascripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
 
@@ -45,6 +45,6 @@ TaskTracker3::Application.configure do
   # the I18n.default_locale when a translation can not be found)
   config.i18n.fallbacks = true
 
-  # devise needs this for
+  # devise needs this 
   config.action_mailer.default_url_options = { :host => 'http://tasktracker3.heroku.com' }
 end
