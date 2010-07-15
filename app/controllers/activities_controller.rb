@@ -25,7 +25,7 @@ class ActivitiesController < ApplicationController
   # GET /activities/new.xml
   def new
     @activity = Activity.new
-    @activity.user = current_user
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @activity }
@@ -40,7 +40,15 @@ class ActivitiesController < ApplicationController
   # POST /activities
   # POST /activities.xml
   def create
-    @activity = Activity.new(params[:activity])
+    @activity = Activity.new(params[:activity])              
+    @activity.user = current_user
+
+    current_user.activities.each do |a|
+      if a.date.eql?(@activity.date) 
+        @activity.errors.add(:date, 'user already has an activity recorded for this date')
+        break
+      end  
+    end
 
     respond_to do |format|
       if @activity.save
