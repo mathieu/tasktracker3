@@ -46,5 +46,5 @@ TaskTracker3::Application.configure do
   config.i18n.fallbacks = true
 
   # devise needs this 
-  config.action_mailer.default_url_options = { :host => 'http://tasktracker3.heroku.com' }
+  config.action_mailer.default_url_options = { :host => 'tasktracker3.marache.com' }
 end
