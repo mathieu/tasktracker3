@@ -43,10 +43,15 @@ class ActivitiesController < ApplicationController
     @activity = Activity.new(params[:activity])              
     @activity.user = current_user
 
-    current_user.activities.each do |a|
+    current_user.activities.each do |a| 
+      puts " #{a.date} <=> #{@activity.date}" 
       if a.date.eql?(@activity.date) 
         @activity.errors.add(:date, 'user already has an activity recorded for this date')
-        break
+        respond_to do |format|
+          format.html { render :action => "new" }
+          format.xml  { render :xml => @activity.errors, :status => :unprocessable_entity }
+        end
+        return
       end  
     end
 
