@@ -15,15 +15,5 @@ class ActivityTest < ActiveSupport::TestCase
     assert activity.errors[:user].any?
     assert activity.errors[:project].any?
   end
-
-  test "test invalid existing date" do
-    activity = Activity.create
-    activity.description = "wip"
-    activity.date = Date.parse('2010-07-11')
-    activity.user = users(:mat)
-    activity.project = projects(:p1)
-    assert !activity.valid?, "activity shouldn't be valid"
-    assert activity.errors[:date].any? , "activity.errors[:date].any? should be true"
-  end
-
+  
 end
