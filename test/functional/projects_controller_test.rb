@@ -1,8 +1,11 @@
 require 'test_helper'
 
-class ProjectsControllerTest < ActionController::TestCase
+class ProjectsControllerTest < ActionController::TestCase  
+  include Devise::TestHelpers
   setup do
-    @project = projects(:one)
+    @project = projects(:p1)
+    @user = users(:mat)
+    sign_in @user
   end
 
   test "should get index" do
@@ -18,32 +21,32 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test "should create project" do
     assert_difference('Project.count') do
-      post :create, :project => @project.attributes
+      post :create, :project => { :name => 'p2', :UB => 'test'}
     end
-
+  
     assert_redirected_to project_path(assigns(:project))
   end
-
+  
   test "should show project" do
     get :show, :id => @project.to_param
     assert_response :success
   end
-
+  
   test "should get edit" do
     get :edit, :id => @project.to_param
     assert_response :success
   end
-
+  
   test "should update project" do
     put :update, :id => @project.to_param, :project => @project.attributes
     assert_redirected_to project_path(assigns(:project))
   end
-
+  
   test "should destroy project" do
     assert_difference('Project.count', -1) do
       delete :destroy, :id => @project.to_param
     end
-
+  
     assert_redirected_to projects_path
-  end
+  end                                                   
 end
