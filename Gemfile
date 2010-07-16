@@ -32,3 +32,4 @@ gem 'devise', '1.1.rc2'
 
 #for heroku
 gem 'pg'
+gem 'newrelic_rpm'
