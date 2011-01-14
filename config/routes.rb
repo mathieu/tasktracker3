@@ -1,9 +1,14 @@
-TaskTracker3::Application.routes.draw do |map|
-  resources :activities
+TaskTracker3::Application.routes.draw do
 
+  # Cannot see anything if you are not logged in
+  devise_for :users
+
+  resources :activities
   resources :projects
 
-  devise_for :users
+
+  root :to => "activities#index"
+  #devise_for :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -55,7 +60,7 @@ TaskTracker3::Application.routes.draw do |map|
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
-  root :to => "activities#index"
+#  root :to => "activities#index"
 
   # See how all your routes lay out with "rake routes"
 
