@@ -28,7 +28,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 #   gem 'webrat'
 # end
 
-gem 'devise', '1.1.rc2'   
+
+gem 'devise', '1.1.5'   
 
 #for heroku
 gem 'pg'
