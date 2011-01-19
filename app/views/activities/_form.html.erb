@@ -21,15 +21,26 @@
 		  <%= @activity.date %>
 		</p>
   <% end %>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :project %><br />
-    <%= collection_select(:activity, :project_id, Project.all, :id, :name, {:prompt => true}) %>
-  </p>
-  </div>
+  
+	<div>
+		<%= f.label :hours_worked %><br />
+	    <%= f.text_field :hours_worked %>
+	</div>
+   
+  	<div class="field">
+    	<%= f.label :description %><br />
+    	<%= f.text_area :description %>
+  	</div>
+  
+	<div class="field">
+    	<%= f.label :project %><br />
+    	<%= collection_select(:activity, :project_id, Project.all, :id, :name, {:prompt => true}) %>
+  	</p>
+  	</div>
+	
+	
+
+
     <%= f.submit %>
   </div>
 <% end %>
