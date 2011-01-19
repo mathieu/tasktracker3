@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TaskTracker3</title>
-  <%= stylesheet_link_tag  "reset" "base" %>
+  
+  <title><%=h yield(:page_title) %></title>
+  <%= stylesheet_link_tag  "reset", "base" %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
     <div id="header">
-      <% if user_signed_in? %>
-
-        <div id="user_nav">
-          Signed in  : <b><%= current_user.email %></b> | 
-          <%= link_to "Sign out", destroy_user_session_path %>
-        </div>
-        <ul id="list_nav">
+      
+		<% if user_signed_in? %>
+        	<div id="user_nav">
+          		Signed in  : <b><%= current_user.email %></b> | 
+          		<%= link_to "Sign out", destroy_user_session_path %>
+        	</div>
+      	<% end %>  	
+		
+		<ul id="list_nav">
 			<li>Home Page</li>
            	<li><%= link_to "Projects", projects_path %></li>
            	<li><%= link_to "Activities", activities_path %></li>
-         </ul>
-
-      <% end %>
+			<li>Stats</li>
+         </ul>	
+      
       
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
