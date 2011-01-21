@@ -1,4 +1,4 @@
-== Welcome TaskTracker3
+== Welcome TaskTracker3 ==
 
 TaskTracker3 is a web-application to track your activities and assign them to projects.
 
@@ -12,3 +12,8 @@ It is usually regularly push on heroku and can be tested live on http://tasktrac
  - User, you when you are logged in
  - Project, a name and a Budget Unit
  - Activity, one per day per Project per User
+
+== Web pages flow ==
+
+login
+ - 
