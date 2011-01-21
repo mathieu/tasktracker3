@@ -3,7 +3,8 @@
 <table>
   <tr>
     <th>Date</th>
-    <th>Description</th>
+    <th>Hours</th>
+	<th>Description</th>
     <th>Project</th>
     <th></th>
     <th></th>
@@ -13,7 +14,8 @@
 <% @activities.each do |activity| %>
   <tr>
     <td><%= activity.date %></td>
-    <td><%= activity.description %></td>
+    <td><%= activity.hours_worked%></td>
+	<td><%= activity.description %></td>
     <td><%= activity.project.name %></td>
     <td><%= activity.user.email %></td>
     <td><%= link_to 'Show', activity %></td>

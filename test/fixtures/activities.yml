@@ -5,9 +5,11 @@ a1:
   description: MyString
   project: :p1
   user: :mat
+  hours_worked: 6
 
 a2:
   date: 2010-07-11
   description: MyString
   project: :p2
   user: :mat
+  hours_worked: 1

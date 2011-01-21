@@ -9,6 +9,7 @@ class ActivityTest < ActiveSupport::TestCase
   test "test invalid empty Activity" do
     activity = Activity.new
     assert !activity.valid?
+    assert activity.hours_worked.nil?
     assert activity.user.nil?
     assert activity.project.nil?
     assert activity.errors[:description].any?

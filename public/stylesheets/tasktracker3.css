@@ -1,3 +1,4 @@
+/*
 div#user_nav {
   text-align: right;
 }
@@ -23,7 +24,7 @@ ul#list_nav li a {
     text-decoration: none;
 }
 
- /*
+ 
 ul#list_nav li {
 display:inline
 }
