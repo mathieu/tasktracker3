@@ -4,6 +4,7 @@
   <tr>
     <th>Date</th>
     <th>Description</th>
+    <th>Day Percent</th>
     <th>Project</th>
     <th></th>
     <th></th>
@@ -14,6 +15,7 @@
   <tr>
     <td><%= activity.date %></td>
     <td><%= activity.description %></td>
+	<td><%= activity.day_percent %></td>
     <td><%= activity.project.name %></td>
     <td><%= activity.user.email %></td>
     <td><%= link_to 'Show', activity %></td>
