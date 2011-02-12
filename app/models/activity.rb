@@ -6,4 +6,5 @@ class Activity < ActiveRecord::Base
   validates_presence_of :user
   validates_numericality_of :day_percent, :only_integer => true, :less_than_or_equal_to => 100
   
+  
 end

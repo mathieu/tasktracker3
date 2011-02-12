@@ -46,18 +46,18 @@ class ActivitiesController < ApplicationController
     @activity = Activity.new(params[:activity])              
     @activity.user = current_user
 
-    current_user.activities.each do |a| 
-      puts " #{a.date} <=> #{@activity.date}" 
-      if a.date.eql?(@activity.date) 
-        @activity.errors.add(:date, 'user already has an activity recorded for this date')
-        respond_to do |format|
-          format.html { render :action => "new" }
-          format.xml  { render :xml => @activity.errors, :status => :unprocessable_entity }
-        end
-        return
-      end  
+    sum_percent = @activity.project.leaving_percent_by_user_and_activity(current_user, @activity.date)
+      
+    if sum_percent + @activity.day_percent > 100
+      @activity.errors.add(:day_percent, "will be greater than 100. Maximum authorized : #{100-sum_percent}")
+      respond_to do |format|
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @activity.errors, :status => :unprocessable_entity }
+      end
+      return
     end
-
+     
+    
     respond_to do |format|
       if @activity.save
         format.html { redirect_to(@activity, :notice => 'Activity was successfully created.') }
@@ -67,6 +67,7 @@ class ActivitiesController < ApplicationController
         format.xml  { render :xml => @activity.errors, :status => :unprocessable_entity }
       end
     end
+    
   end
 
   # PUT /activities/1
@@ -74,6 +75,21 @@ class ActivitiesController < ApplicationController
   def update
     @activity = Activity.find(params[:id])
 
+    sum_percent = @activity.project.leaving_percent_by_user_and_activity(current_user, @activity.date)
+    new_day_percent = Integer(params[:activity]["day_percent"])
+      
+      
+      
+    if sum_percent - @activity.day_percent + new_day_percent > 100
+      @activity.errors.add(:day_percent, "will be greater than 100. Maximum authorized : #{100-sum_percent+@activity.day_percent}")
+      respond_to do |format|
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @activity.errors, :status => :unprocessable_entity }
+      end
+      return
+    end
+    
+    
     respond_to do |format|
       if @activity.update_attributes(params[:activity])
         format.html { redirect_to(@activity, :notice => 'Activity was successfully updated.') }
@@ -96,4 +112,9 @@ class ActivitiesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  
+  private
+  
+  
 end
