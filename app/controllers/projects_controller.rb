@@ -17,7 +17,18 @@ class ProjectsController < ApplicationController
   # GET /projects/1.xml
   def show
     @project = Project.find(params[:id])
+    @activity_by_user = []
+    
+    # get current user activities...
+    @project.activities.each do |activity|
+      puts "${activity.user}"
+      if(activity.user == current_user)
+        @activity_by_user << activity
+      end
+    end
 
+    @activity_by_user = @activity_by_user.sort_by {|a| a.date}
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @project }
@@ -56,6 +67,7 @@ class ProjectsController < ApplicationController
     end
   end
 
+    
   # PUT /projects/1
   # PUT /projects/1.xml
   def update
@@ -71,6 +83,7 @@ class ProjectsController < ApplicationController
       end
     end
   end
+  
 
   # DELETE /projects/1
   # DELETE /projects/1.xml

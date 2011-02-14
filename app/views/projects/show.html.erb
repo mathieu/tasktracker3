@@ -1,19 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @project.name %>
-</p>
+
+<h1><%= @project.name %> project</h1>
+
+<%= link_to 'Edit this project', edit_project_path(@project) %>
 
 <p>
   <b>Ub:</b>
   <%= @project.UB %>
 </p>
 
-<p>
-  <b>Days:</b>
-  <%= @project.activities.size %>
-</p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= form_tag(new_activity_path, :method => "get") do %>
+  <%= hidden_field_tag(:project_id, @project.id) %>
+  <%= submit_tag("Add activity") %>
+<% end %>
+
+
+
+<h2>Listing activities</h2>
+
+<% if(!@activity_by_user) %>
+	No activity
+<% else %>
+	<table>
+	  <tr>
+	    <th>Date</th>
+	    <th>Description</th>
+	    <th>Day Percent</th>
+	    <th></th>
+	    <th></th>
+	  </tr>
+
+	<% @activity_by_user.each do |activity| %>
+	  <tr>
+	    <td><%= activity.date %></td>
+	    <td><%= activity.description %></td>
+		<td><%= activity.day_percent %></td>
+	    <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+	    <td><%= link_to 'Destroy', activity, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+<%end%>

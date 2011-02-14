@@ -1,4 +1,10 @@
 <%= form_for(@activity) do |f| %>
+  
+
+  <%if(@project)%>	
+  	<%= hidden_field_tag(:project_id, @project.id) %>
+  <%end%>
+
   <% if @activity.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
@@ -10,6 +16,8 @@
       </ul>
     </div>
   <% end %>
+  
+
   <% if @activity.id.nil? %>
 		 <div class="field">
 			<%= f.label :date %><br />
@@ -22,6 +30,7 @@
 		</p>
   <% end %>
 
+  
   <div class="field">
     <%= f.label :day_percent %><br />
     <%= f.text_field :day_percent %>
@@ -30,13 +39,18 @@
 	
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </div>
   
-  <div class="field">
-    <%= f.label :project %><br />
-    <%= collection_select(:activity, :project_id, Project.all, :id, :name, {:prompt => true}) %>
-  </p>
+	<%if(!@project)%>
+	<div class="field">
+   		<%= f.label :project %><br />
+   		<%= collection_select(:activity, :project_id, Project.all, :id, :name, {:prompt => true}) %>
+ 	  </p>
+ 	</div>
+	<%end%>
+
+
   </div>
     <%= f.submit %>
   </div>
