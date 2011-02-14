@@ -7,7 +7,7 @@ TaskTracker3::Application.routes.draw do
   resources :projects
 
 
-  root :to => "activities#index"
+  root :to => "projects#index"
   #devise_for :users
 
   # The priority is based upon order of creation:
