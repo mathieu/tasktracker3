@@ -2,17 +2,6 @@ class ActivitiesController < ApplicationController
 
   before_filter :authenticate_user!
 
-  # GET /activities
-  # GET /activities.xml
-  def index
-    @activities = current_user.activities.sort_by {|a| a.date}
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @activities }
-    end
-  end
-
   # GET /activities/1
   # GET /activities/1.xml
   def show
@@ -44,20 +33,17 @@ class ActivitiesController < ApplicationController
   # POST /activities.xml
   def create
     @activity = Activity.new(params[:activity])              
-    @activity.user = current_user
-
-    sum_percent = @activity.project.leaving_percent_by_user_and_activity(current_user, @activity.date)
-      
-    if sum_percent + @activity.day_percent > 100
-      @activity.errors.add(:day_percent, "will be greater than 100. Maximum authorized : #{100-sum_percent}")
+    @activity.user = current_user 
+    
+    if(@activity.project.has_activity_for_user_and_date(current_user, @activity.date))
+      @activity.errors.add(:date, 'user already has an activity recorded for this date')
       respond_to do |format|
         format.html { render :action => "new" }
         format.xml  { render :xml => @activity.errors, :status => :unprocessable_entity }
       end
       return
     end
-     
-    
+
     respond_to do |format|
       if @activity.save
         format.html { redirect_to(@activity, :notice => 'Activity was successfully created.') }
@@ -74,14 +60,9 @@ class ActivitiesController < ApplicationController
   # PUT /activities/1.xml
   def update
     @activity = Activity.find(params[:id])
-
-    sum_percent = @activity.project.leaving_percent_by_user_and_activity(current_user, @activity.date)
-    new_day_percent = Integer(params[:activity]["day_percent"])
       
-      
-      
-    if sum_percent - @activity.day_percent + new_day_percent > 100
-      @activity.errors.add(:day_percent, "will be greater than 100. Maximum authorized : #{100-sum_percent+@activity.day_percent}")
+    if(@activity.project.has_activity_for_user_and_date(current_user, @activity.date))
+       @activity.errors.add(:date, 'user already has an activity recorded for this date')
       respond_to do |format|
         format.html { render :action => "edit" }
         format.xml  { render :xml => @activity.errors, :status => :unprocessable_entity }
@@ -105,16 +86,18 @@ class ActivitiesController < ApplicationController
   # DELETE /activities/1.xml
   def destroy
     @activity = Activity.find(params[:id])
+    targetProject = @activity.project
+    
     @activity.destroy
+    
 
     respond_to do |format|
-      format.html { redirect_to(activities_url) }
+      format.html { redirect_to(targetProject, :notice => 'Activity deleted') }
       format.xml  { head :ok }
     end
   end
   
   
-  private
   
   
 end
