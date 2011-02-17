@@ -23,7 +23,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "should create activity" do
     assert_difference('Activity.count') do
-      post :create, :activity => { :date => Date.parse('2010-07-01'), :description => 'test' , :project => @project }
+      post :create, :activity => { :date => Date.parse('2010-07-01'), :description => 'test' }, :project_id => @project.to_param
     end
   
     assert_redirected_to activity_path(assigns(:activity))

@@ -5,9 +5,15 @@ a1:
   description: MyString
   project: :p1
   user: :mat
-
+  created_at: 2010-07-10
+  updated_at: 2010-07-10
+  day_percent: 100
+  
 a2:
   date: 2010-07-11
   description: MyString
   project: :p2
   user: :mat
+  created_at: 2010-07-11
+  updated_at: 2010-07-11
+  day_percent: 100

@@ -7,8 +7,7 @@ class ActivitiesController < ApplicationController
   # GET /activities/new.xml
   def new
     @activity = Activity.new
-    @project = Project.find(params[:project_id])
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @activity }
@@ -23,7 +22,7 @@ class ActivitiesController < ApplicationController
   # POST /activities
   # POST /activities.xml
   def create
-    @activity = Activity.new(params[:activity])              
+    @activity = Activity.new(params[:activity])
     @project = Project.find(params[:project_id])
     @activity.user = current_user 
     @activity.project = @project
